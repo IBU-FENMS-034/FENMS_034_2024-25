@@ -9,6 +9,7 @@
 #include <chrono>
 #include <string>
 
+// type alias, to avoid copy-pasting unsigned long long int every time :)
 using longest = unsigned long long int;
 
 namespace Fibonacci {

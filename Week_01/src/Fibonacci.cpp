@@ -6,15 +6,15 @@
 #include "../include/MemoryPerf.h"
 #include <chrono>
 
-unsigned long long int Fibonacci::recursive(const longest n) {
+longest Fibonacci::recursive(const longest n) {
     if (n <= 1) {
         return n;
     }
     return recursive(n - 1) + recursive(n - 2);
 }
 
-unsigned long long int Fibonacci::iterative(const longest n) {
-    unsigned long long int fib[n + 1]{};
+longest Fibonacci::iterative(const longest n) {
+    longest fib[n + 1]{};
 
     fib[0] = 0;
     if (n > 0) {
@@ -35,7 +35,7 @@ void Fibonacci::evaluate(const std::string& algorithm) {
 void Fibonacci::calculate_times(const std::string& algorithm, const longest n) {
     const auto start = std::chrono::high_resolution_clock::now();
 
-    unsigned long long int result{};
+    longest result{};
     if (algorithm == "recursive") {
         result = recursive(n);
     } else if (algorithm == "iterative") {
