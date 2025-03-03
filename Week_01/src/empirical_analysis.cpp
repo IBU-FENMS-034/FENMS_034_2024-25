@@ -22,13 +22,13 @@ void evaluate_approach(std::string&& name);
 void sleep(int ms);
 
 int main() {
-    // evaluate_structure("array");
-    // std::cout << std::endl;
-    // evaluate_structure("list");
-    // std::cout << std::endl;
+    evaluate_structure("array");
+    std::cout << std::endl;
+    evaluate_structure("list");
+    std::cout << std::endl;
     evaluate_approach("hashmap");
-    // std::cout << std::endl;
-    // evaluate_approach("hashmap");
+    std::cout << std::endl;
+    evaluate_approach("hashmap");
 }
 
 void evaluate_structure(std::string&& name) {
