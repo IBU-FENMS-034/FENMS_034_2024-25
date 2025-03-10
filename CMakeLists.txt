@@ -46,3 +46,12 @@ add_library(Week_02_lib INTERFACE
 target_link_libraries(Week_02 PRIVATE Week_02_lib)
 target_link_libraries(Week_02_analysis PRIVATE Week_02_lib)
 target_link_libraries(Week_02_test PRIVATE Week_02_lib doctest::doctest)
+
+# Week 2 task
+add_executable(Week_02_labtest
+        Week_02/test/week_02_labtest.cpp
+        Week_02/include/DoubleNode.h
+        Week_02/include/DoublyLinkedList.h
+        Week_02/include/DoublyLinkedList.tpp
+)
+target_link_libraries(Week_02_labtest PRIVATE doctest::doctest)
