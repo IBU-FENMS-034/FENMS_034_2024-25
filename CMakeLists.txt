@@ -17,14 +17,15 @@ FetchContent_MakeAvailable(doctest)
 enable_testing()
 
 # Week 1
-add_executable(Week_01 Week_01/src/week_01.cpp
+add_executable(Week_01 Week_01/src/week_01.cpp)
+add_executable(Week_01_analysis Week_01/src/empirical_analysis.cpp)
+add_executable(Week_01_lab
         Week_01/include/Student.h
         Week_01/include/StudentList.h
         Week_01/src/Student.tpp
         Week_01/src/StudentList.tpp
         Week_01/src/student_test.cpp
 )
-add_executable(Week_01_analysis Week_01/src/empirical_analysis.cpp)
 add_library(Week_01_lib
         Week_01/include/Fibonacci.h
         Week_01/include/MemoryPerf.h
