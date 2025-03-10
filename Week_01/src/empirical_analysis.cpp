@@ -26,7 +26,7 @@ int main() {
     std::cout << std::endl;
     evaluate_structure("list");
     std::cout << std::endl;
-    evaluate_approach("hashmap");
+    evaluate_approach("array");
     std::cout << std::endl;
     evaluate_approach("hashmap");
 }
