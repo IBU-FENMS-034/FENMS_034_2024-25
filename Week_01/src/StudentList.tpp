@@ -1,4 +1,4 @@
-#include "StudentList.h"
+#include "../include/StudentList.h"
 
 template <typename T>
 void StudentList<T>::addStudent(const Student<T>& s) {
