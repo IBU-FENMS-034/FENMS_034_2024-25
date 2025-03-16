@@ -16,7 +16,7 @@ void Stack<Data>::push(const Data& data) {
 
 template<typename Data>
 Data Stack<Data>::pop() {
-    if (top == nullptr) {
+    if (is_empty()) {
         throw std::out_of_range("Stack is empty");
     }
 
@@ -31,7 +31,7 @@ Data Stack<Data>::pop() {
 
 template<typename Data>
 const Data& Stack<Data>::peek() const {
-    if (top == nullptr) {
+    if (is_empty()) {
         throw std::out_of_range("Stack is empty");
     }
     return top->data;

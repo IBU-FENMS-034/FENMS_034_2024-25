@@ -10,7 +10,7 @@ void Queue<Data>::enqueue(const Data& data) {
     Node<Data> *new_node = new Node<Data>();
     new_node->data = data;
 
-    if (head == nullptr) {
+    if (is_empty()) {
         head = tail = new_node;
     } else {
         tail->next = new_node;
@@ -21,7 +21,7 @@ void Queue<Data>::enqueue(const Data& data) {
 
 template<typename Data>
 Data Queue<Data>::dequeue() {
-    if (head == nullptr) {
+    if (is_empty()) {
         throw std::out_of_range("Queue is empty");
     }
 
@@ -40,7 +40,7 @@ Data Queue<Data>::dequeue() {
 
 template<typename Data>
 const Data &Queue<Data>::peek() const {
-    if (head == nullptr) {
+    if (is_empty()) {
         throw std::out_of_range("Queue is empty");
     }
     return head->data;
