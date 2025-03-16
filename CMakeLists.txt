@@ -55,3 +55,15 @@ add_executable(Week_02_labtest
         Week_02/include/DoublyLinkedList.tpp
 )
 target_link_libraries(Week_02_labtest PRIVATE doctest::doctest)
+
+# Week 3
+add_executable(Week_03 Week_03/src/week_03.cpp)
+add_executable(Week_03_test Week_03/test/week_03_test.cpp)
+add_library(Week_03_lib INTERFACE
+        Week_03/include/Node.h
+        Week_03/include/Queue.h
+        Week_03/include/Stack.h
+        Week_03/include/Queue.tpp
+        Week_03/include/Stack.tpp)
+target_link_libraries(Week_03 PRIVATE Week_03_lib)
+target_link_libraries(Week_03_test PRIVATE Week_03_lib doctest::doctest)
