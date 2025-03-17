@@ -17,7 +17,8 @@ FetchContent_MakeAvailable(doctest)
 enable_testing()
 
 # Week 1
-add_executable(Week_01 Week_01/src/week_01.cpp)
+add_executable(Week_01 Week_01/src/week_01.cpp
+        Week_03/include/QueueBasedStack.h)
 add_executable(Week_01_analysis Week_01/src/empirical_analysis.cpp)
 add_executable(Week_01_lab
         Week_01/include/Student.h
