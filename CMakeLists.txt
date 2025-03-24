@@ -68,3 +68,17 @@ add_library(Week_03_lib INTERFACE
         Week_03/include/Stack.tpp)
 target_link_libraries(Week_03 PRIVATE Week_03_lib)
 target_link_libraries(Week_03_test PRIVATE Week_03_lib doctest::doctest)
+
+# Week 4
+add_executable(Week_04 Week_04/src/week_04.cpp)
+add_executable(Week_04_analysis Week_04/src/empirical_analysis.cpp)
+add_executable(Week_04_test Week_04/test/week_04_test.cpp)
+add_library(Week_04_lib INTERFACE
+        Week_04/include/Search.h
+        Week_04/include/Sort.h
+        Week_04/include/Student.h
+        Week_04/include/Sort.tpp
+        Week_04/include/Search.tpp)
+target_link_libraries(Week_04 PRIVATE Week_04_lib)
+target_link_libraries(Week_04_analysis PRIVATE Week_04_lib)
+target_link_libraries(Week_04_test PRIVATE Week_04_lib doctest::doctest)
