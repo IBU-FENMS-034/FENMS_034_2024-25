@@ -82,3 +82,14 @@ add_library(Week_04_lib INTERFACE
 target_link_libraries(Week_04 PRIVATE Week_04_lib)
 target_link_libraries(Week_04_analysis PRIVATE Week_04_lib)
 target_link_libraries(Week_04_test PRIVATE Week_04_lib doctest::doctest)
+
+# Week 4 task
+add_executable(Week_04_labtest
+        Week_04/test/week_04_labtest.cpp
+        Week_04/include/IPAddress.h
+        Week_04/include/FileUtils.h
+        Week_04/include/IPSearch.h
+        Week_04/src/FileUtils.cpp
+        Week_04/src/IPSearch.cpp
+)
+target_link_libraries(Week_04_labtest PRIVATE doctest::doctest)

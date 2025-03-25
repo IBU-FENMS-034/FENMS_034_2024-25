@@ -1,3 +1,4 @@
+#include <array>
 #include <iostream>
 #include "../include/Search.h"
 #include "../include/Sort.h"
@@ -14,7 +15,7 @@ int main() {
 void search_demo() {
     int elements[] = {5, -1, 23, 8, 17, 4, 2, 6};
     int size = sizeof(elements) / sizeof(int); // OR std::size(elements)
-
+    std::cout << "size o: " << size << std::endl;
     std::cout << "Linear search: " << Search::linear_search(elements, size, 17) << std::endl;
     std::cout << "Linear search: " << Search::linear_search(elements, size, 34) << std::endl;
     std::cout << std::endl;
