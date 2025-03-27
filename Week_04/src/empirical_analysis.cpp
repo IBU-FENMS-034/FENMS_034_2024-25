@@ -9,14 +9,14 @@
 #include "../../Week_04/include/Search.h"
 #include "../../Week_04/include/Sort.h"
 
-#define ARRAY_SIZE 1000000
+#define ARRAY_SIZE 100000
 
 int* generate_array(int len);
 void empirical_analysis(const char * algorithm);
 
 int main() {
-    // empirical_analysis("linear_search");
-    // empirical_analysis("binary_search");
+    empirical_analysis("linear_search");
+    empirical_analysis("binary_search");
     empirical_analysis("bubble_sort");
 }
 
