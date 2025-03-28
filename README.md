@@ -17,5 +17,9 @@ This is the official **code repository** for the course Data Structures and Algo
 - [[Week 4] Lecture slides -  Analysis of Algorithms, Search Algorithms and Bubble Sort](https://learning.ibu.edu.ba/mod/url/view.php?id=67113)
 - [[Week 4] Lab document - Binary Search & Bubble Sort](https://learning.ibu.edu.ba/mod/url/view.php?id=67157)
 
+## Week 5: Elementary Sorts
+- [[Week 5] Lecture slides -  Elementary Sorts](https://learning.ibu.edu.ba/mod/url/view.php?id=67594)
+- [[Week 5] Lab document - Elementary Sorting Algorithms](https://learning.ibu.edu.ba/mod/url/view.php?id=67610)
+
 ---
 https://ibu.edu.ba @ 2025

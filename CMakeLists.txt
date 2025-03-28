@@ -93,3 +93,14 @@ add_executable(Week_04_labtest
         Week_04/src/IPSearch.cpp
 )
 target_link_libraries(Week_04_labtest PRIVATE doctest::doctest)
+
+# Week 5
+add_executable(Week_05 Week_05/src/week_05.cpp)
+add_executable(Week_05_analysis Week_05/src/empirical_analysis.cpp)
+add_executable(Week_05_test Week_05/test/week_05_test.cpp)
+add_library(Week_05_lib INTERFACE
+        Week_05/include/ElementarySort.h
+        Week_05/include/ElementarySort.tpp)
+target_link_libraries(Week_05 PRIVATE Week_05_lib)
+target_link_libraries(Week_05_analysis PRIVATE Week_05_lib)
+target_link_libraries(Week_05_test PRIVATE Week_05_lib doctest::doctest)
