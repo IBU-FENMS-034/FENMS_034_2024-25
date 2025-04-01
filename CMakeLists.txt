@@ -104,3 +104,11 @@ add_library(Week_05_lib INTERFACE
 target_link_libraries(Week_05 PRIVATE Week_05_lib)
 target_link_libraries(Week_05_analysis PRIVATE Week_05_lib)
 target_link_libraries(Week_05_test PRIVATE Week_05_lib doctest::doctest)
+
+# Week 5 task
+add_executable(Week_05_labtest
+        Week_05/test/week_05_labtest.cpp
+        Week_05/include/BinaryInsertionSort.h
+        Week_05/include/BinaryInsertionSort.tpp
+)
+target_link_libraries(Week_05_labtest PRIVATE doctest::doctest)
