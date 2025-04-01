@@ -39,7 +39,7 @@ TEST_CASE("Binary insertion sort") {
 
     SUBCASE("Sorting a list of doubles") {
         LinkedList<double> list = {3.14, -11.2, 43.6, 22.5, 7.12, 5.24, 66.2};
-        double expected[] = {-11.2, 3.4, 5.24, 7.12, 22.5, 43.6, 66.2};
+        double expected[] = {-11.2, 3.14, 5.24, 7.12, 22.5, 43.6, 66.2};
 
         BinaryInsertionSort::sort(list);
 

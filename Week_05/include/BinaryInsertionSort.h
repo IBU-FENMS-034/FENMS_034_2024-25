@@ -18,7 +18,7 @@ namespace BinaryInsertionSort {
     void sort(LinkedList<Data>& list);
 
     template<typename Data>
-    int find_insertion_point(const LinkedList<Data>& list, int high, int key);
+    int find_insertion_point(LinkedList<Data>& list, int high, Data key);
 
 };
 
@@ -64,7 +64,7 @@ public:
     void reverse();
     Node<Data>* get_head() const;
     friend void BinaryInsertionSort::sort<>(LinkedList<Data>& list);
-    friend int BinaryInsertionSort::find_insertion_point<>(const LinkedList<Data>& list, int high, int key);
+    friend int BinaryInsertionSort::find_insertion_point<>(LinkedList<Data>& list, int high, Data key);
 };
 
 template<typename Data>
@@ -131,7 +131,8 @@ void LinkedList<Data>::add(const int index, const Data& data) {
     Node<Data>* new_node = new Node<Data>();
     new_node->data = data;
 
-    if (head == nullptr) {
+    if (index == 0) {
+        new_node->next = head;
         head = new_node;
     } else {
         Node<Data>* current = head;
