@@ -112,3 +112,22 @@ add_executable(Week_05_labtest
         Week_05/include/BinaryInsertionSort.tpp
 )
 target_link_libraries(Week_05_labtest PRIVATE doctest::doctest)
+
+# Week 6
+add_executable(Week_06 Week_06/src/week_06.cpp)
+add_executable(Week_06_analysis Week_06/src/empirical_analysis.cpp)
+add_executable(Week_06_test Week_06/test/week_06_test.cpp)
+add_library(Week_06_lib INTERFACE
+        Week_06/include/MergeSort.h
+        Week_06/include/MergeSort.tpp)
+target_link_libraries(Week_06 PRIVATE Week_06_lib)
+target_link_libraries(Week_06_analysis PRIVATE Week_06_lib)
+target_link_libraries(Week_06_test PRIVATE Week_06_lib doctest::doctest)
+
+# Week 6 task
+add_executable(Week_06_labtest
+        Week_06/test/week_06_labtest.cpp
+        Week_06/include/TimSort.h
+        Week_06/include/TimSort.tpp
+)
+target_link_libraries(Week_06_labtest PRIVATE doctest::doctest)
