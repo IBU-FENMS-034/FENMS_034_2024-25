@@ -25,5 +25,9 @@ This is the official **code repository** for the course Data Structures and Algo
 - [[Week 6] Lecture slides -  Merge Sort](https://learning.ibu.edu.ba/mod/url/view.php?id=67919)
 - [[Week 6] Lab document - Merge Sort Algorithm](https://learning.ibu.edu.ba/mod/url/view.php?id=67951)
 
+## Week 7: Quick Sort
+- [[Week 7] Lecture slides -  Quick Sort](https://learning.ibu.edu.ba/mod/url/view.php?id=68216)
+- [[Week 7] Lab document - Quick Sort Algorithm](https://learning.ibu.edu.ba/mod/url/view.php?id=68250)
+
 ---
 https://ibu.edu.ba @ 2025

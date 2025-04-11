@@ -131,3 +131,21 @@ add_executable(Week_06_labtest
         Week_06/include/TimSort.tpp
 )
 target_link_libraries(Week_06_labtest PRIVATE doctest::doctest)
+
+# Week 7
+add_executable(Week_07 Week_07/src/week_07.cpp)
+add_executable(Week_07_analysis Week_07/src/empirical_analysis.cpp)
+add_executable(Week_07_test Week_07/test/week_07_test.cpp)
+add_library(Week_07_lib INTERFACE
+        Week_07/include/QuickSort.h
+        Week_07/include/QuickSort.tpp)
+target_link_libraries(Week_07 PRIVATE Week_07_lib)
+target_link_libraries(Week_07_analysis INTERFACE Week_07_lib)
+target_link_libraries(Week_07_test PRIVATE Week_07_lib doctest::doctest)
+
+# Week 7 task
+add_executable(Week_07_labtest
+        Week_07/test/week_07_labtest.cpp
+        Week_07/include/DualPivotQuickSort.h
+        Week_07/include/DualPivotQuickSort.tpp)
+target_link_libraries(Week_07_labtest PRIVATE doctest::doctest)
