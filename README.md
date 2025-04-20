@@ -29,5 +29,9 @@ This is the official **code repository** for the course Data Structures and Algo
 - [[Week 7] Lecture slides -  Quick Sort](https://learning.ibu.edu.ba/mod/url/view.php?id=68216)
 - [[Week 7] Lab document - Quick Sort Algorithm](https://learning.ibu.edu.ba/mod/url/view.php?id=68250)
 
+## Week 8: Radix Sort & Counting Sort
+- [[Week 8] Lecture slides -  Radix Sort & Counting Sort](https://learning.ibu.edu.ba/mod/url/view.php?id=82417)
+- [[Week 8] Lab document - Radix Sort & Counting Sort](https://learning.ibu.edu.ba/mod/url/view.php?id=82807)
+
 ---
 https://ibu.edu.ba @ 2025

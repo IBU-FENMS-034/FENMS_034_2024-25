@@ -149,3 +149,14 @@ add_executable(Week_07_labtest
         Week_07/include/DualPivotQuickSort.h
         Week_07/include/DualPivotQuickSort.tpp)
 target_link_libraries(Week_07_labtest PRIVATE doctest::doctest)
+
+# Week 8
+add_executable(Week_08 Week_08/src/week_08.cpp)
+add_executable(Week_08_analysis Week_08/src/empirical_analysis.cpp)
+add_executable(Week_08_test Week_08/test/week_08_test.cpp)
+add_library(Week_08_lib INTERFACE
+        Week_08/include/NonComparisonSort.h
+        Week_08/include/NonComparisonSort.tpp)
+target_link_libraries(Week_08 PRIVATE Week_08_lib)
+target_link_libraries(Week_08_analysis PRIVATE Week_08_lib)
+target_link_libraries(Week_08_test PRIVATE Week_08_lib doctest::doctest)
