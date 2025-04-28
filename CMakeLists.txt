@@ -160,3 +160,16 @@ add_library(Week_08_lib INTERFACE
 target_link_libraries(Week_08 PRIVATE Week_08_lib)
 target_link_libraries(Week_08_analysis PRIVATE Week_08_lib)
 target_link_libraries(Week_08_test PRIVATE Week_08_lib doctest::doctest)
+
+# Week 9
+add_executable(Week_09 Week_09/src/week_09.cpp)
+add_executable(Week_09_test Week_09/test/week_09_test.cpp)
+add_library(Week_09_lib INTERFACE
+        Week_09/include/BinaryHeap.h
+        Week_09/include/BinaryHeap.tpp)
+target_link_libraries(Week_09 PRIVATE Week_09_lib)
+target_link_libraries(Week_09_test PRIVATE Week_09_lib doctest::doctest)
+
+# Week 9 task
+add_executable(Week_09_labtest Week_09/test/week_09_labtest.cpp)
+target_link_libraries(Week_09_labtest PRIVATE Week_09_lib doctest::doctest)

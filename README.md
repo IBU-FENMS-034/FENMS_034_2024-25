@@ -33,5 +33,8 @@ This is the official **code repository** for the course Data Structures and Algo
 - [[Week 8] Lecture slides -  Radix Sort & Counting Sort](https://learning.ibu.edu.ba/mod/url/view.php?id=82417)
 - [[Week 8] Lab document - Radix Sort & Counting Sort](https://learning.ibu.edu.ba/mod/url/view.php?id=82807)
 
+## Week 9: Trees & Binary Heap
+- [[Week 9] Lecture slides -  Trees & Binary Heap](https://learning.ibu.edu.ba/mod/url/view.php?id=69778)
+- [[Week 9] Lab document - Binary Heap](https://learning.ibu.edu.ba/mod/url/view.php?id=69808)
 ---
 https://ibu.edu.ba @ 2025
