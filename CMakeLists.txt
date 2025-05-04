@@ -173,3 +173,13 @@ target_link_libraries(Week_09_test PRIVATE Week_09_lib doctest::doctest)
 # Week 9 task
 add_executable(Week_09_labtest Week_09/test/week_09_labtest.cpp)
 target_link_libraries(Week_09_labtest PRIVATE Week_09_lib doctest::doctest)
+
+# Week 10
+add_executable(Week_10 Week_10/src/week_10.cpp)
+add_executable(Week_10_test Week_10/test/week_10_test.cpp)
+add_library(Week_10_lib INTERFACE
+        Week_10/include/Node.h
+        Week_10/include/BinarySearchTree.h
+        Week_10/include/BinarySearchTree.tpp)
+target_link_libraries(Week_10 PRIVATE Week_10_lib)
+target_link_libraries(Week_10_test PRIVATE Week_10_lib doctest::doctest)
