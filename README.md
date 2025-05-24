@@ -37,8 +37,16 @@ This is the official **code repository** for the course Data Structures and Algo
 - [[Week 9] Lecture slides - Trees & Binary Heap](https://learning.ibu.edu.ba/mod/url/view.php?id=69778)
 - [[Week 9] Lab document - Binary Heap](https://learning.ibu.edu.ba/mod/url/view.php?id=69808)
 
-## Week 10: Binary Search Trees
-- [[Week 10] Lecture slides - Binary Search Trees](https://learning.ibu.edu.ba/mod/url/view.php?id=70050)
-- [[Week 10] Lab document - Binary Search Tree (BST)](https://learning.ibu.edu.ba/mod/url/view.php?id=70068)
+## Week 10: Binary Search Trees (Part I)
+- [[Week 10] Lecture slides - Binary Search Trees (Part I)](https://learning.ibu.edu.ba/mod/url/view.php?id=70050)
+- [[Week 10] Lab document - Binary Search Tree (BST) (Part 1)](https://learning.ibu.edu.ba/mod/url/view.php?id=70068)
+
+## Week 11: Binary Search Trees (Part II) & Balanced Search Trees
+- [[Week 11] Lecture slides - Binary Search Trees (Part II) & Balanced Search Trees](https://learning.ibu.edu.ba/mod/url/view.php?id=70401)
+- [[Week 11] Lab document - BST (Part 2) & 2-3 Trees](https://learning.ibu.edu.ba/mod/url/view.php?id=70402)
+
+## Week 12: Red-Black Trees
+- [[Week 12] Lecture slides - Red-Black Trees](https://learning.ibu.edu.ba/mod/url/view.php?id=97120)
+- [[Week 12] Lab document - Red-Black Trees](https://learning.ibu.edu.ba/mod/url/view.php?id=70588)
 ---
 https://ibu.edu.ba @ 2025

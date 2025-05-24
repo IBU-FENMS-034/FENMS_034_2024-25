@@ -183,3 +183,16 @@ add_library(Week_10_lib INTERFACE
         Week_10/include/BinarySearchTree.tpp)
 target_link_libraries(Week_10 PRIVATE Week_10_lib)
 target_link_libraries(Week_10_test PRIVATE Week_10_lib doctest::doctest)
+
+# Week 11
+# Same code as Week 10
+
+# Week 12
+add_executable(Week_12 Week_12/src/week_12.cpp)
+add_executable(Week_12_test Week_12/test/week_12_test.cpp)
+add_library(Week_12_lib INTERFACE
+        Week_12/include/Node.h
+        Week_12/include/RedBlackTree.h
+        Week_12/include/RedBlackTree.tpp)
+target_link_libraries(Week_12 PRIVATE Week_12_lib)
+target_link_libraries(Week_12_test PRIVATE Week_12_lib doctest::doctest)
