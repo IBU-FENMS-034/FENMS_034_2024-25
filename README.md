@@ -48,5 +48,9 @@ This is the official **code repository** for the course Data Structures and Algo
 ## Week 12: Red-Black Trees
 - [[Week 12] Lecture slides - Red-Black Trees](https://learning.ibu.edu.ba/mod/url/view.php?id=97120)
 - [[Week 12] Lab document - Red-Black Trees](https://learning.ibu.edu.ba/mod/url/view.php?id=70588)
+
+## Week 13: Graphs (Part I)
+- [[Week 13] Lecture slides - Graphs (Part I)](https://learning.ibu.edu.ba/mod/url/view.php?id=70549)
+- [[Week 13] Lab document - Graphs (Part I)](https://learning.ibu.edu.ba/mod/url/view.php?id=97336)
 ---
 https://ibu.edu.ba @ 2025

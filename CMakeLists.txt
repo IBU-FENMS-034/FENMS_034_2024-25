@@ -196,3 +196,18 @@ add_library(Week_12_lib INTERFACE
         Week_12/include/RedBlackTree.tpp)
 target_link_libraries(Week_12 PRIVATE Week_12_lib)
 target_link_libraries(Week_12_test PRIVATE Week_12_lib doctest::doctest)
+
+# Week 13
+add_executable(Week_13 Week_13/src/week_13.cpp)
+add_executable(Week_13_test Week_13/test/week_13_test.cpp)
+add_library(Week_13_lib
+        Week_13/include/Graph.h
+        Week_13/src/Graph.cpp
+        Week_13/include/Digraph.h
+        Week_13/src/Digraph.cpp
+        Week_13/src/Edge.cpp
+        Week_13/include/Edge.h
+        Week_13/src/EdgeWeightedGraph.cpp
+        Week_13/include/EdgeWeightedGraph.h)
+target_link_libraries(Week_13 PRIVATE Week_13_lib)
+target_link_libraries(Week_13_test PRIVATE Week_13_lib doctest::doctest)
