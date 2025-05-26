@@ -45,7 +45,7 @@ void undirected_graph_demo() {
     std::cout << std::endl;
 
     // Create a graph from a file
-    Graph g2("../Week_12/resources/tinyG.txt");
+    Graph g2("../Week_13/resources/tinyG.txt");
 
     std::cout << "Number of vertices: " << g2.get_V() << std::endl;
     std::cout << "Number of edges: " << g2.get_E() << std::endl;
@@ -60,7 +60,7 @@ void undirected_graph_demo() {
 }
 
 void directed_graph_demo() {
-    Digraph g1("../Week_12/resources/tinyDG.txt");
+    Digraph g1("../Week_13/resources/tinyDG.txt");
 
     std::cout << "Directed graph:" << std::endl;
     std::cout << "Number of vertices: " << g1.get_V() << std::endl;
@@ -88,7 +88,7 @@ void directed_graph_demo() {
 }
 
 void edge_weighted_graph_demo() {
-    EdgeWeightedGraph ewg("../Week_12/resources/tinyEWG.txt");
+    EdgeWeightedGraph ewg("../Week_13/resources/tinyEWG.txt");
 
     std::cout << "Number of vertices: " << ewg.get_V() << std::endl;
     std::cout << "Number of edges: " << ewg.get_E() << std::endl;
