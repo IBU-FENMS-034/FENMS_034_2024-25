@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 4.0)
 project(FENMS_034_2024_25)
 
 set(CMAKE_CXX_STANDARD 20)
@@ -9,7 +9,7 @@ include(FetchContent)
 FetchContent_Declare(
         doctest
         GIT_REPOSITORY https://github.com/doctest/doctest.git
-        GIT_TAG v2.4.11  # Use the latest stable version
+        GIT_TAG v2.4.12  # Use the latest stable version
 )
 FetchContent_MakeAvailable(doctest)
 
