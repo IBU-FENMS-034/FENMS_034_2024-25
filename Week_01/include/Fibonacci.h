@@ -5,8 +5,6 @@
 #ifndef FIBONACCI_H
 #define FIBONACCI_H
 
-#include <iostream>
-#include <chrono>
 #include <string>
 
 // type alias, to avoid copy-pasting unsigned long long int every time :)
@@ -16,7 +14,6 @@ namespace Fibonacci {
     longest recursive(longest n);
     longest iterative(longest n);
     void evaluate(const std::string& algorithm);
-    static void calculate_times(const std::string& algorithm, longest n);
-};
+}
 
 #endif //FIBONACCI_H

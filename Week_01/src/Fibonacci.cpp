@@ -3,8 +3,15 @@
 //
 #include "../include/Fibonacci.h"
 
-#include "../include/MemoryPerf.h"
 #include <chrono>
+#include <iostream>
+#include <vector>
+
+// F(93) is the largest Fibonacci number that fits in an unsigned long long
+static constexpr longest ITERATIVE_LIMIT = 90;
+static constexpr longest RECURSIVE_LIMIT = 40;
+
+static void calculate_times(const std::string& algorithm, longest n);
 
 longest Fibonacci::recursive(const longest n) {
     if (n <= 1) {
@@ -14,12 +21,12 @@ longest Fibonacci::recursive(const longest n) {
 }
 
 longest Fibonacci::iterative(const longest n) {
-    longest fib[n + 1]{};
+    std::vector<longest> fib(n + 1);
 
     fib[0] = 0;
     if (n > 0) {
         fib[1] = 1;
-        for (int i = 2; i <= n; i++) {
+        for (longest i = 2; i <= n; i++) {
             fib[i] = fib[i - 1] + fib[i - 2];
         }
     }
@@ -27,19 +34,20 @@ longest Fibonacci::iterative(const longest n) {
 }
 
 void Fibonacci::evaluate(const std::string& algorithm) {
-    for (int i = 10; i <= 200; i += 10) {
+    const longest limit = algorithm == "recursive" ? RECURSIVE_LIMIT : ITERATIVE_LIMIT;
+    for (longest i = 10; i <= limit; i += 10) {
         calculate_times(algorithm, i);
     }
 }
 
-void Fibonacci::calculate_times(const std::string& algorithm, const longest n) {
+static void calculate_times(const std::string& algorithm, const longest n) {
     const auto start = std::chrono::high_resolution_clock::now();
 
     longest result{};
     if (algorithm == "recursive") {
-        result = recursive(n);
+        result = Fibonacci::recursive(n);
     } else if (algorithm == "iterative") {
-        result =  iterative(n);
+        result = Fibonacci::iterative(n);
     } else {
         std::cout << algorithm << " is not recognized" << std::endl;
         return;
@@ -51,7 +59,7 @@ void Fibonacci::calculate_times(const std::string& algorithm, const longest n) {
     const auto milliDuration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
     const auto secDuration = std::chrono::duration_cast<std::chrono::seconds>(stop - start);
 
-    std::cout << "Algorithm: " << algorithm << " | " << n << " elements" << std::endl;
+    std::cout << "Algorithm: " << algorithm << " | n = " << n << std::endl;
     std::cout << "Result: " << result << std::endl;
     std::cout << "Elapsed time: "
         << nanoDuration.count() << " ns \t "

@@ -31,6 +31,7 @@ public:
     void remove_from_front();
     void remove_from_back();
     Data& get(int index);
+    const Data& get(int index) const;
     int count() const;
     void reverse();
     // iterator

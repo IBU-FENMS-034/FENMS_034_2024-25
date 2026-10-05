@@ -3,6 +3,7 @@
 //
 
 #include <cstdlib>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <thread>
@@ -72,7 +73,7 @@ void evaluate_structure(std::string&& name) {
     }
     end_memory /= after_samples.size();
 
-    const auto total_memory = end_memory - start_memory;
+    const auto total_memory = end_memory > start_memory ? end_memory - start_memory : 0;
 
     std::cout << "Data structure: " << name << std::endl;
     std::cout << "Start memory: " << MemoryPerf::format_memory_usage(start_memory) << std::endl;

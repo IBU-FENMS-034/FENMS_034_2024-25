@@ -4,8 +4,10 @@
 
 #ifndef LINKEDLIST_TPP
 #define LINKEDLIST_TPP
-#include <stdexcept>
+#include <cstddef>
+#include <iostream>
 #include <iterator>
+#include <stdexcept>
 
 template<typename Data>
 void LinkedList<Data>::add_to_front(const Data& data) {
@@ -76,6 +78,19 @@ Data& LinkedList<Data>::get(int index) {
 }
 
 template<typename Data>
+const Data& LinkedList<Data>::get(int index) const {
+    if (index < 0 || index >= size) {
+        throw std::out_of_range("Index is out of range");
+    }
+
+    const Node<Data>* temp = head;
+    for (int i = 0; i < index; ++i) {
+        temp = temp->next;
+    }
+    return temp->data;
+}
+
+template<typename Data>
 int LinkedList<Data>::count() const {
     return size;
 }
@@ -95,10 +110,16 @@ void LinkedList<Data>::reverse() {
 }
 
 template<typename Data>
-class LinkedList<Data>::Iterator : public std::iterator<std::forward_iterator_tag, Data> {
+class LinkedList<Data>::Iterator {
 private:
     Node<Data>* current;
 public:
+    using iterator_category = std::forward_iterator_tag;
+    using value_type = Data;
+    using difference_type = std::ptrdiff_t;
+    using pointer = Data*;
+    using reference = Data&;
+
     explicit Iterator(Node<Data>* current) : current(current) {}
     Data& operator*() {
         return current->data;

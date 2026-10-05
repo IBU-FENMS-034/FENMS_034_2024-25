@@ -1,4 +1,6 @@
+#include <cstdlib>
 #include <iostream>
+#include <string>
 #include <vector>
 #include <unordered_map>
 #include <chrono>
@@ -86,7 +88,7 @@ void evaluate_structure(std::string&& name) {
     }
     end_memory /= after_samples.size();
 
-    const auto total_memory = end_memory - start_memory;
+    const auto total_memory = end_memory > start_memory ? end_memory - start_memory : 0;
 
     std::cout << "Data structure: " << name << std::endl;
     std::cout << "- Number of elements: " << ARR_SIZE << std::endl;
@@ -132,7 +134,7 @@ void evaluate_approach(std::string&& name) {
     } else if (name == "hashmap") {
         result = find_unique_elements_hashmap(arr);
     } else {
-        std::cout << "Unsupported data structure" << std::endl;
+        std::cout << "Unsupported approach" << std::endl;
         exit(1);
     }
     const auto stop = std::chrono::high_resolution_clock::now();
@@ -159,9 +161,9 @@ void evaluate_approach(std::string&& name) {
     }
     end_memory /= after_samples.size();
 
-    const auto total_memory = end_memory - start_memory;
+    const auto total_memory = end_memory > start_memory ? end_memory - start_memory : 0;
 
-    std::cout << "Data structure: " << name << std::endl;
+    std::cout << "Approach: " << name << std::endl;
     std::cout << "- Number of elements: " << ARR_SIZE << std::endl;
     std::cout << "- Elapsed time: "
         << nanoDuration.count() << " ns \t "
