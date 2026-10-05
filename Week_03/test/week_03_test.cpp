@@ -245,4 +245,4 @@ TEST_CASE("Queue Tests") {
             CHECK_EQ(original.size(), 0);
         }
     }
-};
+}

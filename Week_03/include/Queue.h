@@ -5,7 +5,6 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#define QUEUE_H
 #include "Node.h"
 #include <stdexcept>
 #include <initializer_list>

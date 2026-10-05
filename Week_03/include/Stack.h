@@ -6,6 +6,7 @@
 #define STACK_H
 
 #include "Node.h"
+#include <initializer_list>
 #include <stdexcept>
 
 template <typename Data>
