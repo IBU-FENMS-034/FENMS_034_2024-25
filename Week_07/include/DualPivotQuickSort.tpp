@@ -4,6 +4,7 @@
 
 #pragma once
 #include <cstdlib>
+#include <stdexcept>
 
 template<typename Data>
 void DualPivotQuickSort::quick_sort(Data *arr, int len) {
@@ -18,6 +19,7 @@ void DualPivotQuickSort::sort(Data *arr, int low, int high) {
 template<typename Data>
 int* DualPivotQuickSort::partition(Data *arr, int low, int high) {
     // your code
+    throw std::logic_error("DualPivotQuickSort::partition() is not implemented yet");
 }
 
 template<typename Data>

@@ -4,6 +4,7 @@
 
 #pragma once
 #include <algorithm>
+#include <stdexcept>
 
 template<typename Data>
 void TimSort::sort(Data *arr, const int len, const int threshold) {
@@ -22,6 +23,7 @@ void TimSort::merge(Data *arr, Data *aux, const int low, const int mid, const in
 
 inline int TimSort::calculate_run_length(const int initial_length, const int threshold) {
     // your code
+    throw std::logic_error("TimSort::calculate_run_length() is not implemented yet");
 }
 
 

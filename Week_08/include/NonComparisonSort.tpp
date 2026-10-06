@@ -42,7 +42,7 @@ void NonComparisonSort::sort(Data *arr, int len, int exp) {
 template<typename Data>
 void NonComparisonSort::counting_sort(Data *arr, int len) {
     int max = get_max(arr, len);
-    Data* count = new Data[max + 1]();
+    int* count = new int[max + 1]();
     Data* output = new Data[len];
 
     for (int i = 0; i < len; i++) {

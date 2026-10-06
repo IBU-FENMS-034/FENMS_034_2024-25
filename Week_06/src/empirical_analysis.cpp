@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <chrono>
 #include <iostream>
+#include <string>
 
 #include "../../Week_05/include/ElementarySort.h"
 #include "../../Week_06/include/MergeSort.h"
@@ -12,7 +13,7 @@
 #define ARRAY_SIZE 100000
 
 int* generate_array(int len);
-void empirical_analysis(const char * algorithm);
+void empirical_analysis(const std::string& algorithm);
 
 int main() {
     empirical_analysis("shell_sort");
@@ -28,7 +29,7 @@ int* generate_array(const int len) {
     return arr;
 }
 
-void empirical_analysis(const char* algorithm) {
+void empirical_analysis(const std::string& algorithm) {
     int* arr = generate_array(ARRAY_SIZE);
 
     const auto start = std::chrono::high_resolution_clock::now();
