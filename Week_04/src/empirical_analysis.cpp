@@ -2,6 +2,7 @@
 // Created by aldin on 05/02/2025.
 //
 
+#include <algorithm>
 #include <cstdlib>
 #include <chrono>
 #include <iostream>
@@ -31,6 +32,10 @@ int* generate_array(const int len) {
 
 void empirical_analysis(const std::string& algorithm) {
     int* arr = generate_array(ARRAY_SIZE);
+    if (algorithm == "binary_search") {
+        // Binary search only works on a sorted array, so sort it before the clock starts.
+        std::sort(arr, arr + ARRAY_SIZE);
+    }
 
     const auto start = std::chrono::high_resolution_clock::now();
     const int key = rand() % (ARRAY_SIZE * 10);
