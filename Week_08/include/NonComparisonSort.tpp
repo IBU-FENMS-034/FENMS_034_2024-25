@@ -6,6 +6,10 @@
 
 template<typename Data>
 void NonComparisonSort::radix_sort(Data *arr, int len) {
+    if (len < 2) {
+        return;
+    }
+
     int max = get_max(arr, len);
 
     for (int exp = 1; max / exp > 0; exp *= 10) {
@@ -41,6 +45,10 @@ void NonComparisonSort::sort(Data *arr, int len, int exp) {
 
 template<typename Data>
 void NonComparisonSort::counting_sort(Data *arr, int len) {
+    if (len < 2) {
+        return;
+    }
+
     int max = get_max(arr, len);
     int* count = new int[max + 1]();
     Data* output = new Data[len];

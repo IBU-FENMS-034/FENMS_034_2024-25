@@ -103,7 +103,7 @@ TEST_CASE("Tim sort") {
         int threshold = 8;
 
         CHECK_EQ(5, TimSort::calculate_run_length(19, threshold));
-        CHECK_EQ(9, TimSort::calculate_run_length(17, threshold));
+        CHECK_EQ(5, TimSort::calculate_run_length(17, threshold));
         CHECK_EQ(6, TimSort::calculate_run_length(21, threshold));
         CHECK_EQ(7, TimSort::calculate_run_length(7, threshold));
     }
