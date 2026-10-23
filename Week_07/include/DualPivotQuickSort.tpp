@@ -4,22 +4,54 @@
 
 #pragma once
 #include <cstdlib>
-#include <stdexcept>
 
 template<typename Data>
 void DualPivotQuickSort::quick_sort(Data *arr, int len) {
-    // your code
+    shuffle(arr, len);
+    sort(arr, 0, len - 1);
 }
 
 template<typename Data>
 void DualPivotQuickSort::sort(Data *arr, int low, int high) {
-    // your code
+    if (high <= low) {
+        return;
+    }
+
+    int* pivots = partition(arr, low, high);
+    int lt = pivots[0];
+    int gt = pivots[1];
+    delete[] pivots;
+
+    sort(arr, low, lt - 1);
+    sort(arr, lt + 1, gt - 1);
+    sort(arr, gt + 1, high);
 }
 
 template<typename Data>
 int* DualPivotQuickSort::partition(Data *arr, int low, int high) {
-    // your code
-    throw std::logic_error("DualPivotQuickSort::partition() is not implemented yet");
+    if (arr[high] < arr[low]) {
+        swap(arr, low, high);
+    }
+
+    int lt = low + 1;
+    int gt = high - 1;
+    int k = lt;
+    while (k <= gt) {
+        if (arr[k] < arr[low]) {
+            swap(arr, k++, lt++);
+        } else if (arr[high] < arr[k]) {
+            swap(arr, k, gt--);
+        } else {
+            k++;
+        }
+    }
+    swap(arr, low, --lt);
+    swap(arr, high, ++gt);
+
+    int* pivots = new int[2];
+    pivots[0] = lt;
+    pivots[1] = gt;
+    return pivots;
 }
 
 template<typename Data>

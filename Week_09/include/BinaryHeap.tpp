@@ -142,7 +142,25 @@ int BinaryHeap<Data>::size() const {
 
 template<typename Data>
 void BinaryHeap<Data>::heap_sort(Data *data, int len) {
-    // your code
+    BinaryHeap<Data> heap;
+    heap.resize(len + 1);
+    heap.length = len;
+    for (int i = 0; i < len; i++) {
+        heap.pq[i + 1] = data[i];
+    }
+
+    for (int k = len / 2; k >= 1; k--) {
+        heap.sink(k);
+    }
+
+    while (heap.length > 1) {
+        heap.swap(1, heap.length--);
+        heap.sink(1);
+    }
+
+    for (int i = 0; i < len; i++) {
+        data[i] = heap.pq[i + 1];
+    }
 }
 
 template<typename Data>

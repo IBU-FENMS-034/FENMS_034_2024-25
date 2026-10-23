@@ -3,40 +3,45 @@
 
 #include "QueueBasedStack.h"
 #include <stdexcept>
+#include <utility>
 
 template<typename Data>
-QueueBasedStack<Data>::QueueBasedStack() {
-    // Constructor - Initialize any required data if needed
-}
+QueueBasedStack<Data>::QueueBasedStack() = default;
 
 template<typename Data>
 void QueueBasedStack<Data>::push(const Data& data) {
-    // Implementation goes here
-    (void) data;
+    q2.enqueue(data);
+
+    while (!q1.is_empty()) {
+        q2.enqueue(q1.dequeue());
+    }
+    std::swap(q1, q2);
 }
 
 template<typename Data>
 Data QueueBasedStack<Data>::pop() {
-    // Implementation goes here
-    throw std::logic_error("QueueBasedStack::pop() is not implemented yet");
+    if (is_empty()) {
+        throw std::out_of_range("Stack is empty");
+    }
+    return q1.dequeue();
 }
 
 template<typename Data>
 Data QueueBasedStack<Data>::peek() const {
-    // Implementation goes here
-    throw std::logic_error("QueueBasedStack::peek() is not implemented yet");
+    if (is_empty()) {
+        throw std::out_of_range("Stack is empty");
+    }
+    return q1.peek();
 }
 
 template<typename Data>
 int QueueBasedStack<Data>::size() const {
-    // Implementation goes here
-    throw std::logic_error("QueueBasedStack::size() is not implemented yet");
+    return q1.size();
 }
 
 template<typename Data>
 bool QueueBasedStack<Data>::is_empty() const {
-    // Implementation goes here
-    throw std::logic_error("QueueBasedStack::is_empty() is not implemented yet");
+    return q1.is_empty();
 }
 
 #endif // QUEUEBASEDSTACK_TPP
